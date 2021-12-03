@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListParcelaController">
+   <children>
+      <Label layoutX="7.0" layoutY="26.0" text="Nome ou CPF" />
+      <TextField fx:id="txtNomeOuCpf" layoutX="124.0" layoutY="22.0" />
+      <ComboBox fx:id="comboboxCliente" layoutX="273.0" layoutY="22.0" onAction="#onComboBoxCLienteAction" prefHeight="25.0" prefWidth="198.0" />
+      <Label layoutX="7.0" layoutY="62.0" text="Número Documento" />
+      <TextField fx:id="txtPesquisarDocumento" layoutX="124.0" layoutY="58.0" />
+      <TableView fx:id="tableViewParcela" layoutX="14.0" layoutY="148.0" prefHeight="438.0" prefWidth="991.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableColumndataCompra" prefWidth="88.0" text="Data Compra" />
+            <TableColumn fx:id="tableColumnVencimento" prefWidth="74.0" text="Vencimento" />
+            <TableColumn fx:id="tableColumnStatus" prefWidth="83.0" text="Status" />
+            <TableColumn fx:id="tableColumnValorDaCompra" prefWidth="91.0" text="Valor Compra" />
+            <TableColumn fx:id="tableColumnValorDaParcela" prefWidth="83.0" text="Valor Parcela" />
+            <TableColumn fx:id="tableColumnNumDoc" prefWidth="83.0" text="Num Doc" />
+            <TableColumn fx:id="tableColumnCpf" prefWidth="82.0" text="Cliente CPF" />
+            <TableColumn fx:id="tableColumnNome" prefWidth="95.0" text="Cliente Nome" />
+            <TableColumn fx:id="tableColumnEDIT" prefWidth="82.0" />
+            <TableColumn fx:id="tableColumnEditParcela" prefWidth="75.0" />
+            <TableColumn fx:id="tableColumnRemoveParcela" prefWidth="75.0" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnPesquisar" layoutX="280.0" layoutY="58.0" mnemonicParsing="false" onAction="#onBtnPesquisarAction" prefHeight="25.0" prefWidth="97.0" text="Pesquisar" />
+      <RadioButton fx:id="radioVencidas" layoutX="394.0" layoutY="62.0" mnemonicParsing="false" text="Parcelas Vencidas" />
+      <Label fx:id="labelClienteSelecionado" layoutX="16.0" layoutY="93.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelFiltroSelecionado" layoutX="14.0" layoutY="119.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
